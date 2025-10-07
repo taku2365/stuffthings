@@ -1,0 +1,34 @@
+;;無変換キーを有効にする
+vk1D::
+Send, {vk1D}
+return
+
+;; 無変換 + i で　カーソル　上
+;; 無変換 + k で　カーソル　下
+;; 無変換 + j で　カーソル　左
+;; 無変換 + l で　カーソル　右
+;; 無変換 + h で home
+;; 無変換 + ; で end
+;; 無変換 + u で backspace
+;; 無変換 + o で delete
+;; Biindは同時押し対応
+vk1D & i::Send, {Blind}{up}
+vk1D & k::Send, {Blind}{down}
+vk1D & j::Send, {Blind}{left}
+vk1D & l::Send, {Blind}{right}
+vk1D & h::Send, {Blind}{home}
+vk1D & `;::Send,{Blind}{end}
+vk1D & u::Send, {Blind}{Backspace}
+vk1D & o::Send, {Blind}{Enter}
+vk1D & f::Send, {Blind}^{right}
+vk1D & d::Send, {Blind}^{left}
+
+return
+
+
+Capslock::Ctrl
+sc03a::Ctrl
+
+
+;; 変換でIME on off 切り替え  これはwindowsの右下のところから設定を行う
+;; プロパティー　詳細設定　ユーザー定義　編集　変換　windowsIME on off 
